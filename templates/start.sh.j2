@@ -17,11 +17,11 @@ $JAVA_BIN -cp ".:lib/*" \
     -XX:NativeMemoryTracking=detail \
     -XX:+UnlockDiagnosticVMOptions \
     -XX:+PrintNMTStatistics \
-    -Dlogback.configurationFile=conf/logback.xml \
+    -Dlogback.configurationFile=config/logback.xml \
     -Dio.netty.noUnsafe=true \
     -Djdk.nio.maxCachedBufferSize=262144 \
     -Djava.net.preferIPv4Stack=true \
-    -Djava.library.path=./:./bin:./bin/native/darwin \
+    -Djava.library.path=.:bin: \
     -Dallow.cors=true \
     -Dcom.sun.management.jmxremote \
     -Dcom.sun.management.jmxremote.port={{ jmx_port }} \

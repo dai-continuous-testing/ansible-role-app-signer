@@ -1,7 +1,7 @@
-Experitest - Cloud Agent ansible role
+Experitest - App Signer ansible role
 =========
 
-This role will install \ uninstall cloud agent for mac os hosts
+This role will install \ uninstall app signer for mac os hosts
 
 Requirements
 ------------
@@ -15,7 +15,7 @@ Role Variables
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | state | should the application be present or absent | present, absent | present | no |
-| app_version | application version to install | string | 12.4.5373 | no |
+| app_version | application version to install | string | 12.4.5372 | no |
 | server_port | port number for the server | number | 8050 | no |
 | installation_folder | the folder in which the applction will be installed | string | for mac: ~/experitest/app-signer-version <br> for windows: C:\\Experitest\\app-signer-version  | no |
 | jmx_port | port number for jmx inspection | number | 51236 | no |
