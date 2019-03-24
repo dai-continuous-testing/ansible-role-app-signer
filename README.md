@@ -1,7 +1,7 @@
-Experitest - Cloud Agent ansible role
+Experitest - App Signer ansible role
 =========
 
-This role will install \ uninstall cloud agent for mac os hosts
+This role will install \ uninstall app signer for mac os hosts
 
 Requirements
 ------------
