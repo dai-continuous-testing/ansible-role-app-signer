@@ -64,14 +64,6 @@
     state: absent
   become: yes
 
-- name: kill adb processes
-  win_shell: |
-    taskkill /IM adb.exe /F
-  register: killadbresults
-  changed_when: killadbresults.rc == 0 and 'The process "adb.exe" not found.' not in killadbresults.stderr
-  failed_when: killadbresults.rc != 0 and 'The process "adb.exe" not found.' not in killadbresults.stderr
-  become: yes
-
 # delete old installation (optional)
 
 - name: clear old installation folder
@@ -136,12 +128,6 @@
     state: absent
   become: yes
 
-# install cambrionix package
-
-- name: start the installation for cambrionix tools
-  debug:
-    msg: TODO - add invocation
-
 # install the service
 
 - name: create the service
@@ -150,19 +136,8 @@
     application: "{{ installation_folder }}\\{{ launcher_file_name }}"
     stdout_file: "{{ installation_folder }}\\logs\\server.out.log"
     stderr_file: "{{ installation_folder }}\\logs\\server.err.log"
-    state: present
-
-# start the service (optional)
-
-- name: start the service
-  win_nssm:
-    name: "{{ service_name }}"
-    application: "{{ installation_folder }}\\{{ launcher_file_name }}"
-    stdout_file: "{{ installation_folder }}\\logs\\server.out.log"
-    stderr_file: "{{ installation_folder }}\\logs\\server.err.log"
-    state: restarted
+    state: "{{ (start_after_install is defined and start_after_install == True) | ternary('restarted', 'stopped')  }}"
   become: yes
-  when: start_after_install is defined and start_after_install == True
   
 # clear temp files (optional)
 
