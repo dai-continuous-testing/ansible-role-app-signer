@@ -66,6 +66,8 @@
     path: "{{ installation_folder }}"
     state: absent
   when: clear_before_install == True
+  notify:
+    - start the service
 
 # unpack and copy all the files to the installation folder
 
@@ -95,6 +97,8 @@
 - name: copy the file to installation folder
   command: "cp -r {{ temp_folder }}/{{ (installer_file_name | splitext)[0] }}/{{ convention }}/ {{ installation_folder }}/"
   become: yes
+  notify:
+    - start the service
 
 - name: copy plist
   template:
