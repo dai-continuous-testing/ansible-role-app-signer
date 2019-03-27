@@ -4,8 +4,8 @@ app_name: app-signer
 service_name: "com.experitest.{{ app_name }}"
 main_class: "com.experitest.app.signer.SignerApplication"
 
-server_port: 8050
-jmx_port: 51236
+server_port: 8083
+jmx_port: 51237
 
 start_after_install: True
 
