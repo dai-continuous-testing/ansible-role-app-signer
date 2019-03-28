@@ -7,6 +7,8 @@ main_class: "com.experitest.app.signer.SignerApplication"
 server_port: 8083
 jmx_port: 51237
 
+extra_app_props: {}
+
 start_after_install: True
 
 clear_temp_folder: False
