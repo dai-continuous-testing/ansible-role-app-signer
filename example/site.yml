@@ -1,5 +1,5 @@
 
-- hosts: cloud-agents
+- hosts: app-signers
 
   pre_tasks:
     
@@ -8,4 +8,4 @@
       when: ansible_os_family == "Windows"
 
   roles:
-    - role: cloud-agent
+    - role: app-signer
