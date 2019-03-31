@@ -9,7 +9,12 @@ main_class: "com.experitest.app.signer.SignerApplication"
 server_port: 8083
 jmx_port: 51237
 
-extra_app_props: {}
+base_application_properties:
+  - "server.port": "{{ server_port }}"
+
+extra_application_properties: {}
+
+application_properties: "{{ base_application_properties | combine(extra_application_properties) }}"
 
 start_after_install: True
 
