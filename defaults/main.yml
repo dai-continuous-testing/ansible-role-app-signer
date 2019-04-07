@@ -9,6 +9,8 @@ main_class: "com.experitest.app.signer.SignerApplication"
 server_port: 8083
 jmx_port: 51237
 
+extra_java_options: []
+
 base_application_properties:
   - "server.port": "{{ server_port }}"
 
