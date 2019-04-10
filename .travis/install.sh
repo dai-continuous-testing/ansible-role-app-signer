@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
-
+    echo "osx"
     # Install some custom requirements on macOS
     # e.g. brew install pyenv-virtualenv
 
@@ -15,4 +15,5 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     esac
 else
     # Install some custom requirements on Linux
+    echo "linux"
 fi
