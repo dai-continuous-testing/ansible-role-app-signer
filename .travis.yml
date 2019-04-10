@@ -12,7 +12,7 @@ install:
     
 script: 
   - ansible --version
-  - cd $TRAVIS_BUILD_DIR/tests/01_sanity && ./start.sh
+  - cd $TRAVIS_BUILD_DIR/tests/01_sanity && ./start.sh || travis_terminate 1;
   - cd $TRAVIS_BUILD_DIR/tests/02_install_twice && ./start.sh
   - cd $TRAVIS_BUILD_DIR/tests/03_install_uninstall && ./start.sh
   - cd $TRAVIS_BUILD_DIR/tests/04_uninstall && ./start.sh
