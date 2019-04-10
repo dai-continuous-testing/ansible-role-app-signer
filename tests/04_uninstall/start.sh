@@ -1,7 +1,7 @@
 
 echo "[STEP 1] installing dependencies"
 
-ansible-galaxy install git+https://github.com/ExperitestOfficial/ansible-role-app-signer.git,$TRAVIS_BRANCH
+ansible-galaxy install git+https://github.com/ExperitestOfficial/ansible-role-app-signer.git,$TRAVIS_BRANCH --force
 
 echo "[STEP 1] installing dependencies - completed successfully"
 

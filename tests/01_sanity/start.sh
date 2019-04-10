@@ -1,7 +1,9 @@
 
 echo "[STEP 1] installing dependencies"
 
-ansible-galaxy install git+https://github.com/ExperitestOfficial/ansible-role-app-signer.git,$TRAVIS_BRANCH
+GIT_URL=$(git remote get-url origin)
+
+ansible-galaxy install $GIT_URL,$TRAVIS_BRANCH --force
 
 echo "[STEP 1] installing dependencies - completed successfully"
 
