@@ -13,7 +13,12 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
             # Install some custom Python 3.3 requirements on macOS
             ;;
     esac
-else
-    # Install some custom requirements on Linux
+fi
+
+# if [ "$TRAVIS_OS_NAME" == "windows" ]; then
+#     echo "windows"
+# fi
+
+if [ "$TRAVIS_OS_NAME" == "linux" ]; then
     echo "linux"
 fi

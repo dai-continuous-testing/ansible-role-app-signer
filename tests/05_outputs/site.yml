@@ -1,0 +1,17 @@
+---
+
+- hosts: localhost
+  roles:
+    - ansible-role-app-signer
+
+  tasks:
+
+    - name: print var value
+      debug: var=ansible_role_app_signer
+      ignore_errors: yes
+
+    - name: verify output exists
+      assert: 
+        that: ansible_role_app_signer is defined
+      fail_msg: "'ansible_role_app_signer' is not defined"
+      success_msg: "'ansible_role_app_signer' is defined"
