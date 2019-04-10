@@ -5,9 +5,6 @@ matrix:
     include:
         - os: osx
           language: generic
-          env: TOXENV=py32
-        - os: osx
-          language: generic
           env: TOXENV=py33
 install:
     - ./.travis/install.sh
@@ -15,3 +12,4 @@ install:
     
 script: 
   - ansible --version
+  - cd ./tests/sanity && ./start.sh
