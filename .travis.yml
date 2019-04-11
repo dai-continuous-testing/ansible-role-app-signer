@@ -1,12 +1,24 @@
 
 language: python
-cache: pip
 
 matrix:
     include:
+
         - os: osx
           language: generic
-          env: TOXENV=py33
+          env: TEST_NAME=01_sanity
+        - os: osx
+          language: generic
+          env: TEST_NAME=02_install_twice
+        - os: osx
+          language: generic
+          env: TEST_NAME=03_install_uninstall
+        - os: osx
+          language: generic
+          env: TEST_NAME=04_uninstall
+        - os: osx
+          language: generic
+          env: TEST_NAME=05_outputs
 
 install:
     - ./.travis/install.sh
@@ -14,8 +26,6 @@ install:
     
 script: 
   - ansible --version
-  - cd $TRAVIS_BUILD_DIR/tests/01_sanity && ./start.sh
-  - cd $TRAVIS_BUILD_DIR/tests/02_install_twice && ./start.sh
-  - cd $TRAVIS_BUILD_DIR/tests/03_install_uninstall && ./start.sh
-  - cd $TRAVIS_BUILD_DIR/tests/04_uninstall && ./start.sh
-  - cd $TRAVIS_BUILD_DIR/tests/05_outputs && ./start.sh
+  - cd $TRAVIS_BUILD_DIR/tests/$TEST_NAME && ./start.sh
+
+cache: pip
