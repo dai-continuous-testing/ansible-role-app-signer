@@ -1,9 +1,13 @@
+#!/bin/bash
+
+# exit on error
+set -e
 
 echo "[STEP 1] installing dependencies"
 
 GIT_URL=$(git remote get-url origin)
 
-ansible-galaxy install $GIT_URL,$TRAVIS_BRANCH --force
+ansible-galaxy install git+$GIT_URL,$TRAVIS_BRANCH --force
 
 echo "[STEP 1] installing dependencies - completed successfully"
 
