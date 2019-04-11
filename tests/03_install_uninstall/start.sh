@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# exit on error
-set -e
+set -ev
 
 echo "[STEP 1] installing dependencies"
 
