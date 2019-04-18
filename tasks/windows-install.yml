@@ -21,6 +21,12 @@
 
 # required dependencies
 
+- name: make sure chocolatey is installed
+  win_chocolatey:
+    name: chocolatey
+    state: present
+  ignore_errors: yes
+
 - name: disabled win_chocolatey_feature(useEnhancedExitCodes)
   # workaroud a know issue of win chochlatey
   win_chocolatey_feature:
