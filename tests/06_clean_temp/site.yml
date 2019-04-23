@@ -1,0 +1,42 @@
+---
+
+- hosts: localhost
+  
+  roles:
+    - name: ansible-role-app-signer
+      clear_temp_folder: no
+
+  tasks:
+
+    - name: get file status
+      stat:
+        path: "/tmp/experitest"
+        follow: yes
+      register: tmp_stat
+
+    - name: assert that tmp folder exists
+      assert:
+        that: "{{ item }}"
+      with_items:
+        - tmp_stat.stat.exists == true
+        - tmp_stat.stat.isdir == true 
+
+- hosts: localhost
+  
+  roles:
+    - name: ansible-role-app-signer
+      clear_temp_folder: yes
+
+  tasks:
+
+    - name: get file status
+      stat:
+        path: "/tmp/experitest"
+        follow: yes
+      register: tmp_stat
+
+    - name: assert that tmp folder exists
+      assert:
+        that: "{{ item }}"
+      with_items:
+        - tmp_stat.stat.exists == false

@@ -7,18 +7,26 @@ matrix:
         - os: osx
           language: generic
           env: TEST_NAME=01_sanity
+        
         - os: osx
           language: generic
           env: TEST_NAME=02_install_twice
+        
         - os: osx
           language: generic
           env: TEST_NAME=03_install_uninstall
+        
         - os: osx
           language: generic
           env: TEST_NAME=04_uninstall
+        
         - os: osx
           language: generic
           env: TEST_NAME=05_outputs
+        
+        - os: osx
+          language: generic
+          env: TEST_NAME=06_clean_temp
 
 install:
     - ./.travis/install.sh
