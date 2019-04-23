@@ -1,0 +1,31 @@
+
+language: python
+
+matrix:
+    include:
+
+        - os: osx
+          language: generic
+          env: TEST_NAME=01_sanity
+        - os: osx
+          language: generic
+          env: TEST_NAME=02_install_twice
+        - os: osx
+          language: generic
+          env: TEST_NAME=03_install_uninstall
+        - os: osx
+          language: generic
+          env: TEST_NAME=04_uninstall
+        - os: osx
+          language: generic
+          env: TEST_NAME=05_outputs
+
+install:
+    - ./.travis/install.sh
+    - pip install ansible
+    
+script: 
+  - ansible --version
+  - cd $TRAVIS_BUILD_DIR/tests/$TEST_NAME && ./start.sh
+
+cache: pip
