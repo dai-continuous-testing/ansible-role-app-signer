@@ -1,7 +1,7 @@
 Experitest - App Signer ansible role 
 =========
 
-[![Build Status](https://travis-ci.com/ExperitestOfficial/ansible-role-app-signer.svg)](https://travis-ci.com/ExperitestOfficial/ansible-role-app-signer)
+[![Build Status](https://travis-ci.org/ExperitestOfficial/ansible-role-app-signer.svg)](https://travis-ci.org/ExperitestOfficial/ansible-role-app-signer)
 
 This role will install \ uninstall app signer for mac os hosts
 
