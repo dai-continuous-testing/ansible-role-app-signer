@@ -34,3 +34,7 @@
   command: "launchctl load {{ service_plist_file_path }}"
   become: yes
   when: ansible_os_family == 'Darwin'
+
+- name: wait for service to start
+  health_check:
+    url: "http://localhost:{{ server_port }}"
