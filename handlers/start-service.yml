@@ -37,4 +37,5 @@
 
 - name: wait for service to start
   health_check:
-    url: "http://localhost:{{ server_port }}"
+    url: "http://localhost:{{ server_port }}/manage/health"
+    expected_status: 401
