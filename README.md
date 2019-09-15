@@ -3,13 +3,12 @@ Experitest - App Signer ansible role
 
 [![Build Status](https://travis-ci.org/ExperitestOfficial/ansible-role-app-signer.svg)](https://travis-ci.org/ExperitestOfficial/ansible-role-app-signer)
 
-This role will install \ uninstall app signer for mac os hosts
+This role will install \ uninstall regional proxy for windows, linux and mac os hosts
 
 Requirements
 ------------
 
-This role assumes that you have java 8 installed on the instance
-Supports mac os hosts only.
+Supports windows, linux and mac os hosts only.
 
 Role Variables
 --------------
@@ -21,7 +20,7 @@ Role Variables
 | server_port | port number for the server | number | 8083 | no |
 | extra_application_properties | additional props to be override in application.properties file | dict | {} | no |
 | extra_java_options | extand java options | array of strings | [] | no |
-| installation_folder | the folder in which the applction will be installed | string | for mac: /Applications/Experitest/app-signer-version <br> for windows: C:\\Experitest\\app-signer-version  | no |
+| installation_folder | the folder in which the applction will be installed | string | for mac: /Applications/Experitest/app-signer-version <br> for windows: C:\\Experitest\\app-signer-version <br> for linux: /opt/Experitest/app-signer-version | no |
 | jmx_port | port number for jmx inspection | number | 51237 | no |
 | java_version | java jre version to install | string | 1.8.0_181 | no |
 | custom_download_url | custom url to download the installation from (zip format) | string |  | no |
