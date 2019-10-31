@@ -8,6 +8,7 @@ This role will install \ uninstall regional proxy for windows, linux and mac os 
 Requirements
 ------------
 
+[ansible-role-java8](https://github.com/ExperitestOfficial/ansible-role-java8) must be installed on all machines. <br>
 Supports windows, linux and mac os hosts only.
 
 Role Variables
