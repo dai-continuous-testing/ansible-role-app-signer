@@ -6,9 +6,14 @@ required_modifiable_fields:
   - jmx_port
   - installation_root_folder
   - java_version
+  - installer_checksum
 
 app_name: app-signer
-__app_version: 12.10.7560
+__app_version: 12.12.7794
+
+darwin_installer_checksum: "10b423c825c3d7d654040b148398f6187f6d0df1edf7364ee4fb687ba84165fe"
+linux_installer_checksum: "ebd6090c7d1a833230e9395a9a0133ea1e8994764fb0f24b97e5c4d259f6285e"
+windows_installer_checksum: "6fa40cdb804c5c72123816b9747569e6e4b1e79619f0f40c86ec4e1eb908e07a"
 
 main_class: "com.experitest.app.signer.SignerApplication"
 
