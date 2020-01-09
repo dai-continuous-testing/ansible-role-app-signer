@@ -246,4 +246,5 @@
       installation_folder: "{{ installation_folder }}"
       configuration_file: "{{ installation_folder }}/config/application.properties"
       java_bin: "{{ java_bin }}"
+      service_name: "{{ service_name }}"
       
