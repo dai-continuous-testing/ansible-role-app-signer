@@ -8,9 +8,11 @@ required_modifiable_fields:
   - java_version
 
 app_name: app-signer
-__app_version: 12.12.7989
+__app_version: 20.2.8326
 
 main_class: "com.experitest.app.signer.SignerApplication"
+
+__deployment_mode: online
 
 __server_port: 8083
 __jmx_port: 51237
