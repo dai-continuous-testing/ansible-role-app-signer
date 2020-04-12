@@ -1,4 +1,4 @@
-Experitest - App Signer ansible role 
+Experitest - App Signer ansible role
 =========
 
 [![Build Status](https://travis-ci.org/ExperitestOfficial/ansible-role-app-signer.svg)](https://travis-ci.org/ExperitestOfficial/ansible-role-app-signer)
