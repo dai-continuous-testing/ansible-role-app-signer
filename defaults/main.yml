@@ -17,7 +17,7 @@ main_class: "com.experitest.app.signer.SignerApplication"
 __server_port: 8083
 __jmx_port: 51237
 
-__java_version: 8u292-b10
+__java_version: 17.0.3_7
 
 extra_java_options: []
 
