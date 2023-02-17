@@ -3,7 +3,6 @@
 required_modifiable_fields:
   - app_version
   - server_port
-  - jmx_port
   - installation_root_folder
   - java_version
   - custom_download_username
@@ -15,7 +14,6 @@ __app_version: 23.1.17217
 main_class: "com.experitest.app.signer.SignerApplication"
 
 __server_port: 8083
-__jmx_port: 51237
 
 __java_version: 17.0.3_7
 
