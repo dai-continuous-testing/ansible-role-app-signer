@@ -31,6 +31,8 @@ Role Variables
 | clear_temp_folder | remove temp folder after installation | boolean | False | no |
 | clear_before_install | removing old installation before installing new version | boolean | False | no |
 | kill_notepad | kill notepad/notepadd++ apps on windows | boolean | False | no |
+| download | only download the release version | boolean | True | no |
+| deploy | only deploy the release version | boolean | True | no |
 
 Example Playbook
 ----------------
