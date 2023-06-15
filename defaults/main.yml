@@ -9,7 +9,7 @@ required_modifiable_fields:
   - custom_download_password
 
 app_name: app-signer
-__app_version: 23.5.18107
+__app_version: 23.5.18164
 
 main_class: "com.experitest.app.signer.SignerApplication"
 
