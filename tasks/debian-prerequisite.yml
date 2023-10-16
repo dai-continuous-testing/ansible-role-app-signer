@@ -1,0 +1,12 @@
+# required dependencies
+
+- name: make sure dependencies is installed
+  apt:
+    name: "{{ item }}"
+    state: present
+    lock_timeout: 180
+  become: yes
+  with_items:
+    - rsync
+    - unzip
+    - psmisc
