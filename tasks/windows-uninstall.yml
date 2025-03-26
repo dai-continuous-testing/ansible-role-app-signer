@@ -5,7 +5,7 @@
       - item is defined
       - item | length > 0
     quiet: true
-  with_items:
+  loop:
   - service_name
   - installation_root_folder
 

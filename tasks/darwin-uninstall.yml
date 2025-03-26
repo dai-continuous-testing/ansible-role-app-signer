@@ -5,7 +5,7 @@
       - item is defined
       - item | length > 0
     quiet: true
-  with_items:
+  loop:
   - installation_root_folder
   - service_plist_file_path
 

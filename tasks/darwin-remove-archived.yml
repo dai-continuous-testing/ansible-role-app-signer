@@ -7,7 +7,7 @@
       - item is defined
       - item | length > 0
     quiet: true
-  with_items:
+  loop:
   - installation_root_folder
   - app_name
   - app_version
