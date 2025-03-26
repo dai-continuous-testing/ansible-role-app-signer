@@ -4,8 +4,8 @@
 - name: assert all vars are set
   assert: 
     that:
-      - "{{ item }} is defined"
-      - "{{ item | length > 0 }}" 
+      - item is defined
+      - item | length > 0
     quiet: true
   with_items:
   - installation_root_folder
