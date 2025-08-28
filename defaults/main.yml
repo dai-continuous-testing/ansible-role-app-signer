@@ -10,7 +10,7 @@ required_modifiable_fields:
 
 app_name: app-signer
 
-__app_version: 25.7.24051
+__app_version: 25.7.24175
 
 
 main_class: "com.experitest.app.signer.SignerApplication"
