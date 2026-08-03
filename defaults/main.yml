@@ -17,7 +17,7 @@ main_class: "com.experitest.app.signer.SignerApplication"
 
 __server_port: 8083
 
-__java_version: 25.0.2_10
+__java_version: 25.0.4_7
 
 # OpenTelemetry Configuration
 otel_enabled: false
